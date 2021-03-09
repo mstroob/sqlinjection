@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: mark
+Build-Jdk: 15.0.2
+Implementation-Title: sqlinjection
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.database.demo
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/sqlinjection
+Created-By: Maven Integration for Eclipse
+
