@@ -6,13 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
  
 @Entity
-public class User {
+public class Users {
     private Long id;
     private String username;
     private String password;
 
  
-    protected User() {
+    protected Users() {
     }
  
     @Id

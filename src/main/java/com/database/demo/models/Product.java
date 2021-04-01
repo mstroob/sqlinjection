@@ -9,16 +9,18 @@ import javax.persistence.Id;
 public class Product {
     private Long id;
     private String name;
+    private String description;
     private float price;
  
     public Product() {
     }
  
-	public Product(Long id, String name, float price) {
+	public Product(Long id, String name, String description, float price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.price = price;
+		this.description = description;
 	}
     
     @Id
@@ -48,6 +50,14 @@ public class Product {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
      
 }

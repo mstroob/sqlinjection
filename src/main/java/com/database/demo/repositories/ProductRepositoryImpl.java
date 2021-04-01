@@ -24,18 +24,18 @@ public class ProductRepositoryImpl {
 		
 		List<Product> list = new ArrayList<Product>();
 		
-	    String sql = "SELECT * FROM product where name = '"+ keyword +"';";
+	    String sql = "SELECT * FROM product where CONCAT(name,description) LIKE '%"+ keyword +"%';";
 	    LOG.info("SQL entry {} ", sql);
 	    try {
 	        Connection c = dataSource.getConnection();
 			ResultSet rs = c.createStatement().executeQuery(sql);
 			
-			
 			while (rs.next()) {
 		    	  int i = rs.getInt("id");
 		    	  String str = rs.getString("name");
+		    	  String desc = rs.getString("description");
 		    	  float flt = rs.getFloat("price");
-		    	  Product product = new Product(Long.valueOf(i), str, flt);
+		    	  Product product = new Product(Long.valueOf(i), str, desc, flt);
 
 		    	  list.add(product);
 		    	}
